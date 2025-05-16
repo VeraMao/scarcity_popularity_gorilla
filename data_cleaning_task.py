@@ -75,3 +75,48 @@ output_path = os.path.join(current_dir, "product_responses.csv")
 final_wide_df.to_csv(output_path, index=False)
 print(f"Saved: {output_path}")
 #%%
+current_dir = os.path.dirname(os.path.abspath(__file__))
+file_name = "product_responses.csv"
+file_path = os.path.join(current_dir, file_name)
+df = pd.read_csv(file_path)
+
+# Recode for purchase likelihood
+likelihood_map = {
+    "Very unlikely": 1,
+    "Unlikely": 2,
+    "Somewhat unlikely": 3,
+    "Neutral": 4,
+    "Somewhat likely": 5,
+    "Likely": 6,
+    "Very likely": 7
+}
+
+value_map = {
+    "Not valuable at all": 1,
+    "Slightly valuable": 2,
+    "Somewhat valuable": 3,
+    "Moderately valuable": 4,
+    "Fairly valuable": 5,
+    "Very valuable": 6,
+    "Extremely valuable": 7
+}
+
+trust_map = {
+    "Do not trust at all": 1,
+    "Trust very little": 2,
+    "Trust somewhat": 3,
+    "Neutral": 4,
+    "Trust fairly well": 5,
+    "Trust a lot": 6,
+    "Trust completely": 7
+}
+
+# Apply mappings to the appropriate columns
+df['Response_2_recoded'] = df['Response_2'].map(likelihood_map)
+df['Response_3_recoded'] = df['Response_3'].map(value_map)
+df['Response_4_recoded'] = df['Response_4'].map(trust_map)
+
+# Save recoded dataset
+output_path = os.path.join(current_dir, "product_responses_recoded.csv")
+df.to_csv(output_path, index=False)
+print(f"Saved: {output_path}")
