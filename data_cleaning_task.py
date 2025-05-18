@@ -2,10 +2,10 @@
 import os
 import pandas as pd
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-file_name = "task_0515.csv"
-file_path = os.path.join(current_dir, file_name)
+current_dir = os.getcwd()  # Works in notebooks!
+file_path = os.path.join(current_dir, "Cleaned_Datasets", "task_0515.csv")
 df = pd.read_csv(file_path)
+
 
 # Identify BEGIN and END indices
 begin_indices = df[df['Response'] == 'BEGIN'].index.tolist()
@@ -116,7 +116,36 @@ df['Response_2_recoded'] = df['Response_2'].map(likelihood_map)
 df['Response_3_recoded'] = df['Response_3'].map(value_map)
 df['Response_4_recoded'] = df['Response_4'].map(trust_map)
 
-# Save recoded dataset
-output_path = os.path.join(current_dir, "product_responses_recoded.csv")
-df.to_csv(output_path, index=False)
-print(f"Saved: {output_path}")
+#%%
+# Copy original
+df_raw = df.copy()
+
+# Rename for consistency
+df_raw = df_raw.rename(columns={
+    "Participant Private ID": "Participant_ID",
+    "Task Name": "Task_Name",
+    "Response_1": "Payment",
+    "Response_2_recoded": "Intent",
+    "Response_3_recoded": "Value",
+    "Response_4_recoded": "Trust"
+})
+# Extract Condition from Task Name
+df_raw["Condition"] = df_raw["Task_Name"].str.replace("_cue", "", regex=False).str.lower()
+# Extract Context from Product
+df_raw["Context"] = df_raw["Product"].apply(lambda x: "hedonic" if "hed" in x else "utilitarian")
+# Extract Product from Product filename
+df_raw["Product"] = df_raw["Product"].apply(lambda x: "chocolate" if "choc" in x else "headphones")
+
+# Keep only relevant columns in the correct order
+df_long = df_raw[["Participant_ID", "Condition", "Context", "Product", "Payment", "Intent", "Value", "Trust"]]
+
+# Preview result
+df_long.head()
+df_long.to_csv("product_responses_recoded_cleaned.csv", index=False)
+
+#%%
+cleaned_dir = os.path.join(current_dir, "Cleaned_Datasets")
+output_path = os.path.join(cleaned_dir, "task_cleaned.csv")
+df_long.to_csv(output_path, index=False)
+
+# %%
