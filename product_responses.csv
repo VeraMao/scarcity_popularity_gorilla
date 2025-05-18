@@ -51,6 +51,10 @@ Participant Private ID,Task Name,Product,Response_1,Response_2,Response_3,Respon
 13398579,Both_cue,both_hed_hd.png,50,Somewhat likely,Fairly valuable,Neutral
 13398579,Both_cue,both_uti_choc.png,25,Unlikely,Somewhat valuable,Trust fairly well
 13398579,Both_cue,both_uti_hd.png,45,Somewhat unlikely,Slightly valuable,Trust very little
+13398627,Popularity_cue,popularity_hed_choc.png,20,Unlikely,Somewhat valuable,Trust very little
+13398627,Popularity_cue,popularity_hed_hd.png,120,Neutral,Moderately valuable,Neutral
+13398627,Popularity_cue,popularity_uti_choc.png,8,Very unlikely,Somewhat valuable,Trust very little
+13398627,Popularity_cue,popularity_uti_hd.png,50,Somewhat unlikely,Somewhat valuable,Trust somewhat
 13398917,None_cue,no_hed_choc.png,30,Neutral,Fairly valuable,Trust fairly well
 13398917,None_cue,no_hed_hd.png,100,Somewhat unlikely,Moderately valuable,Neutral
 13398917,None_cue,no_uti_choc.png,10,Somewhat unlikely,Slightly valuable,Neutral
@@ -127,3 +131,27 @@ Participant Private ID,Task Name,Product,Response_1,Response_2,Response_3,Respon
 13416489,Scarcity_cue,scarcity_hed_hd.png,0,Very unlikely,Somewhat valuable,Trust somewhat
 13416489,Scarcity_cue,scarcity_uti_choc.png,10,Likely,Moderately valuable,Neutral
 13416489,Scarcity_cue,scarcity_uti_hd.png,10,Unlikely,Somewhat valuable,Trust somewhat
+13432034,None_cue,no_hed_choc.png,3,Somewhat unlikely,Somewhat valuable,Trust somewhat
+13432034,None_cue,no_hed_hd.png,4,Somewhat unlikely,Somewhat valuable,Trust somewhat
+13432034,None_cue,no_uti_choc.png,3,Somewhat unlikely,Somewhat valuable,Trust somewhat
+13432034,None_cue,no_uti_hd.png,30,Somewhat unlikely,Somewhat valuable,Trust somewhat
+13433841,Scarcity_cue,scarcity_hed_choc.png,10,Neutral,Moderately valuable,Neutral
+13433841,Scarcity_cue,scarcity_hed_hd.png,40,Very unlikely,Not valuable at all,Trust somewhat
+13433841,Scarcity_cue,scarcity_uti_choc.png,6,Neutral,Moderately valuable,Trust a lot
+13433841,Scarcity_cue,scarcity_uti_hd.png,40,Very unlikely,Not valuable at all,Trust fairly well
+13434656,Popularity_cue,popularity_hed_choc.png,15,Unlikely,Slightly valuable,Trust very little
+13434656,Popularity_cue,popularity_hed_hd.png,50,Somewhat unlikely,Slightly valuable,Trust a lot
+13434656,Popularity_cue,popularity_uti_choc.png,20,Somewhat likely,Moderately valuable,Neutral
+13434656,Popularity_cue,popularity_uti_hd.png,20,Somewhat unlikely,Moderately valuable,Trust a lot
+13441623,Both_cue,both_hed_choc.png,30,Neutral,Somewhat valuable,Trust somewhat
+13441623,Both_cue,both_hed_hd.png,80,Somewhat likely,Somewhat valuable,Trust somewhat
+13441623,Both_cue,both_uti_choc.png,15,Somewhat unlikely,Slightly valuable,Trust very little
+13441623,Both_cue,both_uti_hd.png,80,Somewhat likely,Somewhat valuable,Trust somewhat
+13445452,Both_cue,both_hed_choc.png,3,Very unlikely,Slightly valuable,Do not trust at all
+13445452,Both_cue,both_hed_hd.png,15,Unlikely,Somewhat valuable,Trust very little
+13445452,Both_cue,both_uti_choc.png,3,Unlikely,Slightly valuable,Trust very little
+13445452,Both_cue,both_uti_hd.png,20,Neutral,Somewhat valuable,Trust very little
+13449082,None_cue,no_hed_choc.png,13,Very unlikely,Not valuable at all,Neutral
+13449082,None_cue,no_hed_hd.png,25,Somewhat unlikely,Somewhat valuable,Neutral
+13449082,None_cue,no_uti_choc.png,10,Unlikely,Not valuable at all,Neutral
+13449082,None_cue,no_uti_hd.png,10,Somewhat unlikely,Slightly valuable,Neutral
